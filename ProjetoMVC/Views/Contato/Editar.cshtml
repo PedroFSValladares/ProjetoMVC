@@ -1,0 +1,24 @@
+﻿@model ProjetoMVC.Models.Contato
+@{
+    ViewData["Title"] = "Editar Contato";
+}
+
+<form asp-action="Editar">
+    <div class="form-group">
+        <label asp-for="Nome" class="control-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Numero" class="control-label">Numero</label>
+        <input type="text" asp-for="Numero" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Nome" class="control-label">Ativo</label>
+        <input type="checkbox" asp-for="Ativo" class="form-check-input"/>
+    </div>
+    <br />
+    <input type="submit" value="Editar" class="mt-2 btn btn-primary"/>
+</form>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

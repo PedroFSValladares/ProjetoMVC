@@ -1,0 +1,17 @@
+﻿@model ProjetoMVC.Models.Contato
+@{
+    ViewData["Title"] = "Detalhes do contato";
+    string ativo = Model.Ativo ? "Sim" : "Não";
+}
+<h1>Detalhes de @Html.DisplayFor(x => x.Nome)</h1>
+
+<div>
+    Numero: @Html.DisplayFor(x => x.Numero)
+</div>
+<div>
+    Ativo(a)? @ativo.
+</div>
+<div>
+    <a asp-action="Index">Voltar</a>
+    <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a>
+</div>
